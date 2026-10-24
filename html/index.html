@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MusicList – Piesne</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+ <div class="container header-inner">
+  <a class="brand" href="index.html"><span class="logo">LOGO</span>MusicList</a>
+  <input type="checkbox" id="menu-toggle" aria-label="Zobraziť menu">
+  <label class="menu-btn" for="menu-toggle">Menu</label>
+  <nav class="main-nav" aria-label="Hlavná navigácia">
+   <ul>
+    <li><a href="#">Domov</a></li>
+    <li><a href="index.html" aria-current="page">Piesne</a></li>
+    <li><a href="#">Zoznamy</a></li>
+   </ul>
+  </nav>
+  <div class="auth">
+   <a class="btn btn-cream" href="#">Prihlásiť sa</a>
+   <a class="btn btn-light" href="#">Registrovať sa</a>
+  </div>
+ </div>
+</header>
+<main>
+ <div class="container">
+  <section class="hero">
+   <h1>Objavuj hudobnú knižnicu</h1>
+   <p>Prehliadaj piesne, vytváraj zoznamy a zdieľaj noty s ostatnými hudobníkmi</p>
+   <a class="btn btn-white" href="#">Pridať novú pieseň</a>
+  </section>
+
+  <section class="card filters" aria-label="Filtrovanie piesní">
+   <strong>Filtrovanie</strong>
+   <select aria-label="Tónina"><option>Tónina</option><option>C dur</option><option>G dur</option></select>
+   <select aria-label="Typ / Žáner"><option>Typ / Žáner</option><option>Ľudová</option><option>Valčík</option><option>Polka</option></select>
+   <input class="search" type="search" placeholder="Vyhľadaj pieseň, autora..." aria-label="Vyhľadávanie">
+  </section>
+
+  <section class="song-grid" aria-label="Zoznam piesní">
+    <article class="card song-card">
+     <div class="song-thumb"><h2><a class="card-link" href="detail.html">Kopala studienku</a></h2><p>G dur &bull; Ľudová</p></div>
+     <div class="song-body">
+      <p class="meta">Pridal: Marek Beňo</p>
+      <a class="icon-btn" href="#" aria-label="Stiahnuť noty – Kopala studienku"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+     </div>
+    </article>
+    <article class="card song-card">
+     <div class="song-thumb"><h2><a class="card-link" href="detail.html">Viedenský valčík</a></h2><p>C dur &bull; Valčík</p></div>
+     <div class="song-body">
+      <p class="meta">Pridal: Eva Kováčová</p>
+      <a class="icon-btn" href="#" aria-label="Stiahnuť noty – Viedenský valčík"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+     </div>
+    </article>
+    <article class="card song-card">
+     <div class="song-thumb"><h2><a class="card-link" href="detail.html">Polka z Detvy</a></h2><p>B dur &bull; Polka</p></div>
+     <div class="song-body">
+      <p class="meta">Pridal: Ján Novák</p>
+      <a class="icon-btn" href="#" aria-label="Stiahnuť noty – Polka z Detvy"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg></a>
+     </div>
+    </article>
+  </section>
+  <div class="more"><a class="btn" href="#">Načítaj ďalšie</a></div>
+ </div>
+</main>
+</body>
+</html>
