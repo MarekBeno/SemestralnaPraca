@@ -100,9 +100,19 @@ main{padding:1.75rem 0 3rem}
  .song-grid{grid-template-columns:1fr}
  .filters{flex-direction:column;align-items:stretch}
  .filters .search{max-width:none;flex:0 0 auto}
- .page-title .actions{margin-left:0;width:100%}
- .page-title .actions .btn{flex:1}
+ .page-title .actions{margin-left:0;width:100%;justify-content:center}
  .panel{padding:1rem}
  .comment-form{flex-direction:column}
  .pager{flex-wrap:wrap;justify-content:center}
 }
+
+/* formuláre a akcie pri kartách */
+.form-panel{max-width:40rem;margin:0 auto}
+.form-panel h1{font-size:1.8rem;margin-bottom:1rem}
+.field{display:grid;gap:.35rem;margin-bottom:1rem}
+.field label{font-weight:700}
+.form-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.5rem}
+.alert{border:2px solid var(--royal);background:var(--lav-xl);border-radius:.5rem;padding:.75rem 1rem;margin-bottom:1rem}
+.inline-form{display:inline-flex;margin:0}
+.card-actions{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.empty{text-align:center;color:var(--muted);padding:2rem 0}

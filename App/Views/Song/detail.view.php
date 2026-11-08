@@ -1,13 +1,17 @@
 <?php
 
+/** @var \App\Models\Song $song */
 /** @var \Framework\Support\LinkGenerator $link */
 ?>
 <div class="page-title">
- <h1>Viedenský valčík</h1>
+ <h1><?= e($song->getTitle()) ?></h1>
  <span class="chip">Verejná</span>
  <div class="actions">
-  <a class="btn" href="#">Upraviť pieseň</a>
-  <a class="btn" href="#">Zmazať pieseň</a>
+  <a class="btn" href="<?= $link->url('song.edit', ['id' => $song->getId(), 'from' => 'detail']) ?>">Upraviť pieseň</a>
+  <form class="inline-form" method="post" action="<?= $link->url('song.delete') ?>">
+    <input type="hidden" name="id" value="<?= $song->getId() ?>">
+    <button class="btn" type="submit">Zmazať pieseň</button>
+   </form>
  </div>
 </div>
 
@@ -24,10 +28,10 @@
  <aside class="card panel" aria-label="Informácie o piesni">
   <h2>Informácie</h2>
   <dl class="info">
-   <dt>Pridal</dt><dd>Eva Kováčová</dd>
-   <dt>Tónina</dt><dd>C dur</dd>
-   <dt>Typ / Žáner</dt><dd>Valčík</dd>
-   <dt>Pridané</dt><dd>12. 3. 2026</dd>
+   <dt>Pridal</dt><dd><?= e($song->getAuthor()) ?></dd>
+   <dt>Tónina</dt><dd><?= e($song->getTonality()) ?></dd>
+   <dt>Typ / Žáner</dt><dd><?= e($song->getGenre()) ?></dd>
+   
   </dl>
   <div class="info-actions">
    <a class="btn btn-primary btn-block" href="#">Stiahnuť noty</a>
